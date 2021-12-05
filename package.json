@@ -1,0 +1,23 @@
+{
+  "name": "pairs",
+  "version": "1.0.0",
+  "description": "Pairs Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackeberry/pairs.git"
+  },
+  "author": "Sam Tackeberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stackeberry/pairs/issues"
+  },
+  "homepage": "https://github.com/stackeberry/pairs#readme",
+  "dependencies": {
+    "browsersync": "0.0.1-security",
+    "bulma": "^0.9.3"
+  }
+}
