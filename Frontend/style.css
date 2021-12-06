@@ -1,16 +1,45 @@
 body {
-    
+    margin: 0;
 }
 
 .navbar {
-    background-color: blue;
+    background-color: black;
+    color: white;
     display: flex;
-    
+    justify-content: left;
+    align-items: center;
+    height: 5em;
+    border-bottom: 3px solid darkorange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.title {
-
+.nav-title {
+    padding-left: 3em;
+    margin: 0px;
+    font-size: 150%;
 }
-.nav ul {
-    list-style: none;
+
+.nav-links {
+    list-style-type: none;
+    margin: 0px;
+    display: flex;
+}
+
+.nav-button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: white;
+    line-height: 5em;
+    width: 7em;
+    font-size: 100%;
+}
+
+.nav-button:hover {
+    background-color: grey;
+    color: darkorange;
 }
