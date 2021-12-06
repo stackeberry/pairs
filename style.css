@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
 .navbar {
     background-color: black;
     color: white;
@@ -43,3 +48,45 @@ body {
     background-color: grey;
     color: darkorange;
 }
+
+.login-signup {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em;
+}
+
+.home-header {
+    font-size: larger;
+}
+
+.forms {
+    display: flex;
+}
+
+.form-container {
+    display: flex;
+    justify-content: right;
+}
+
+input {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.submit-button {
+    width: 100px;
+    background-color: black;
+    color: darkorange;
+    border: 2px solid darkorange;
+    border-radius: 1px;
+}
+
