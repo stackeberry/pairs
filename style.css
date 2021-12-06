@@ -70,9 +70,9 @@ ul {
     display: flex;
 }
 
+
 .form-container {
     display: flex;
-    justify-content: right;
 }
 
 input {

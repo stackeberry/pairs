@@ -6,11 +6,13 @@ var db = require("./database.js");
 
 // Require md5 MODULE
 var md5 = require("md5");
+const cors = require("cors");
 
 
 // Make Express use its own built-in body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 // Set server port
 var HTTP_PORT = 5000;
@@ -40,14 +42,7 @@ app.get("/app/users/scores", (req, res) => {
     res.status(200).json(stmt);
 })
 
-// CREATE a new user (HTTP method POST) at endpoint /app/new/
-app.post("/app/new/", (req, res) => {	
-	console.log(req.body)
-	const stmt = db.prepare("INSERT INTO userinfo (user, pass) VALUES (?, ?)").run(req.body.user, md5(req.body.pass));
-	res.json({"message":`1 record created: ID ${stmt.lastInsertRowid} (201)`});
-	res.status(201);
-});
-
+// CREATE a new user (HTTP method POST) at endpoint /app/new/user
 app.post("/app/new/user", (req, res, next) => {	
 	var data = {
 		email: req.body.email,
@@ -56,7 +51,7 @@ app.post("/app/new/user", (req, res, next) => {
 	}
 	const stmt = db.prepare("INSERT INTO userinfo (email, user, pass) VALUES (?, ?, ?)");
 	const info = stmt.run(data.email, data.user, data.pass);
-	res.json({"message": info.changes+`1 record created: ID ${stmt.lastInsertRowid} (201)`});
+	res.json({"message": `1 record created: ID ${stmt.lastInsertRowid} (201)`});
 	res.status(201);
 });
 
